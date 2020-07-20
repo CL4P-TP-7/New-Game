@@ -1,0 +1,13 @@
+C:\Users\Кексик\source\repos\Bobolink\Bobolink\bin\Debug\netcoreapp3.1\Bobolink.exe
+C:\Users\Кексик\source\repos\Bobolink\Bobolink\bin\Debug\netcoreapp3.1\Bobolink.deps.json
+C:\Users\Кексик\source\repos\Bobolink\Bobolink\bin\Debug\netcoreapp3.1\Bobolink.runtimeconfig.json
+C:\Users\Кексик\source\repos\Bobolink\Bobolink\bin\Debug\netcoreapp3.1\Bobolink.runtimeconfig.dev.json
+C:\Users\Кексик\source\repos\Bobolink\Bobolink\bin\Debug\netcoreapp3.1\Bobolink.dll
+C:\Users\Кексик\source\repos\Bobolink\Bobolink\bin\Debug\netcoreapp3.1\Bobolink.pdb
+C:\Users\Кексик\source\repos\Bobolink\Bobolink\obj\Debug\netcoreapp3.1\Bobolink.csprojAssemblyReference.cache
+C:\Users\Кексик\source\repos\Bobolink\Bobolink\obj\Debug\netcoreapp3.1\Bobolink.csproj.CoreCompileInputs.cache
+C:\Users\Кексик\source\repos\Bobolink\Bobolink\obj\Debug\netcoreapp3.1\Bobolink.AssemblyInfoInputs.cache
+C:\Users\Кексик\source\repos\Bobolink\Bobolink\obj\Debug\netcoreapp3.1\Bobolink.AssemblyInfo.cs
+C:\Users\Кексик\source\repos\Bobolink\Bobolink\obj\Debug\netcoreapp3.1\Bobolink.dll
+C:\Users\Кексик\source\repos\Bobolink\Bobolink\obj\Debug\netcoreapp3.1\Bobolink.pdb
+C:\Users\Кексик\source\repos\Bobolink\Bobolink\obj\Debug\netcoreapp3.1\Bobolink.genruntimeconfig.cache
