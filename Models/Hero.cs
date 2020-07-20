@@ -1,17 +1,18 @@
-﻿using System;
+﻿using Bobolink.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Tavern;
 
 namespace Heroes
 {
-    class Hero
+    public class Hero
     {
         public string Name { get; private set; }
         public string HeroClass { get; private set; }
-        public double Gold { get; private set; }
+        public decimal Gold { get; private set; }
 
-        public Hero (string name, string heroclass, double gold)
+        public Hero (string name, string heroclass, decimal gold)
         {
             Name = name;
             HeroClass = heroclass;
@@ -23,13 +24,7 @@ namespace Heroes
             Console.WriteLine($"{HeroClass} применяет навык класса");
         }
 
-        public void UseElixir(Elixir elixir)
-        {
-            Console.WriteLine($"{HeroClass} выпивает {elixir.Name}");
-
-        }
-
-        public void BuyItem(Item product)
+        public void BuyItem(ItemProduct product)
         {
             Gold -= product.Price;  
         }

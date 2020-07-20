@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Кексик\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Кексик\\source\\repos\\Bobolink\\Bobolink\\Bobolink.csproj",
+      "projectUniqueName": "C:\\Projects\\Keksik\\New-Game\\Bobolink.csproj",
       "projectName": "Bobolink",
-      "projectPath": "C:\\Users\\Кексик\\source\\repos\\Bobolink\\Bobolink\\Bobolink.csproj",
-      "packagesPath": "C:\\Users\\Кексик\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Кексик\\source\\repos\\Bobolink\\Bobolink\\obj\\",
+      "projectPath": "C:\\Projects\\Keksik\\New-Game\\Bobolink.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\Keksik\\New-Game\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Кексик\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

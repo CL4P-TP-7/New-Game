@@ -7,7 +7,9 @@ using System.IO.Compression;
 using System;
 using Tavern;
 using Heroes;
-
+using Bobolink.Abstract;
+using Bobolink.Service;
+using Bobolink.Interfaces;
 
 namespace NeverLand
 
@@ -16,6 +18,8 @@ namespace NeverLand
     {
         static void Main(string[] args)
         {
+
+            // TODO: Создать Repository Pattern
             Hero hero = new Hero(
                 "Azrael",
                 "Black Knight",
@@ -40,14 +44,19 @@ namespace NeverLand
                 500,
                 50);
 
-            Item[] item = new Item[] {
-            sword1,
-            health_elixir,
-            plate,
-            poison_elixir
+            ItemProduct[] item = new ItemProduct[] {
+                sword1,
+                health_elixir,
+                plate,
+                poison_elixir
             };
 
             Console.WriteLine($"\nMan in tavern say you:\"Listen to me. I have many interesting items.\"\n");
+
+            IHeroActions heroActions = new HeroActions();
+
+            heroActions.UseItemProduct(hero, poison_elixir, health_elixir);
+
             for (int i = 0; i < item.Length; i++)
             {
                 Console.WriteLine($"Item {i + 1}:{item[i].Name}" +
