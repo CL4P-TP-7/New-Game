@@ -20,6 +20,10 @@ namespace NeverLand
         {
 
             // TODO: Создать Repository Pattern
+            // TODO: Добавить базу данных
+            // TODO: Подумать о паттернах
+            // TODO: Добавить сервисы чатов
+
             Hero hero = new Hero(
                 "Azrael",
                 "Black Knight",
