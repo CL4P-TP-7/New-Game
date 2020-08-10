@@ -11,8 +11,9 @@ namespace Heroes
         public string Name { get; private set; }
         public string HeroClass { get; private set; }
         public decimal Gold { get; private set; }
+        public string Description { get; set; }
 
-        public Hero (string name, string heroclass, decimal gold)
+        public Hero(string name, string heroclass, decimal gold)
         {
             Name = name;
             HeroClass = heroclass;
@@ -26,10 +27,10 @@ namespace Heroes
 
         public void BuyItem(ItemProduct product)
         {
-            Gold -= product.Price;  
+            Gold -= product.Price;
         }
 
     }
-    
-    
+
+
 }

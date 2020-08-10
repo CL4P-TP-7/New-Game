@@ -24,3 +24,16 @@ C:\Projects\Keksik\New-Game\bin\Debug\netcoreapp3.1\Bobolink.runtimeconfig.dev.j
 C:\Projects\Keksik\New-Game\bin\Debug\netcoreapp3.1\Bobolink.dll
 C:\Projects\Keksik\New-Game\bin\Debug\netcoreapp3.1\Bobolink.pdb
 C:\Projects\Keksik\New-Game\obj\Debug\netcoreapp3.1\Bobolink.genruntimeconfig.cache
+C:\Sharp\BOBOLINK\New-Game\bin\Debug\netcoreapp3.1\Bobolink.exe
+C:\Sharp\BOBOLINK\New-Game\bin\Debug\netcoreapp3.1\Bobolink.deps.json
+C:\Sharp\BOBOLINK\New-Game\bin\Debug\netcoreapp3.1\Bobolink.runtimeconfig.json
+C:\Sharp\BOBOLINK\New-Game\bin\Debug\netcoreapp3.1\Bobolink.runtimeconfig.dev.json
+C:\Sharp\BOBOLINK\New-Game\bin\Debug\netcoreapp3.1\Bobolink.dll
+C:\Sharp\BOBOLINK\New-Game\bin\Debug\netcoreapp3.1\Bobolink.pdb
+C:\Sharp\BOBOLINK\New-Game\obj\Debug\netcoreapp3.1\Bobolink.csprojAssemblyReference.cache
+C:\Sharp\BOBOLINK\New-Game\obj\Debug\netcoreapp3.1\Bobolink.AssemblyInfoInputs.cache
+C:\Sharp\BOBOLINK\New-Game\obj\Debug\netcoreapp3.1\Bobolink.AssemblyInfo.cs
+C:\Sharp\BOBOLINK\New-Game\obj\Debug\netcoreapp3.1\Bobolink.csproj.CoreCompileInputs.cache
+C:\Sharp\BOBOLINK\New-Game\obj\Debug\netcoreapp3.1\Bobolink.dll
+C:\Sharp\BOBOLINK\New-Game\obj\Debug\netcoreapp3.1\Bobolink.pdb
+C:\Sharp\BOBOLINK\New-Game\obj\Debug\netcoreapp3.1\Bobolink.genruntimeconfig.cache

@@ -28,11 +28,58 @@ namespace NeverLand
             // TODO: Логика выбора героя, чтобы пользователь сам выбрать героя
             // Продумать что можеть делать герой
             // Продумай в начала, два режима, первый можно самому выбрать героя, второй рандомно назначается
+            #region
 
             Hero hero = new Hero(
                 "Azrael",
                 "Black Knight",
                 1000);
+            hero.Description = "Crusader of darkness";
+
+            Hero hero1 = new Hero(
+                "Hawk",
+                "Rogue",
+                1000);
+            hero1.Description = "Dodger";
+
+            Hero hero2 = new Hero(
+                "Zick",
+                "Paladin",
+                1000);
+            hero2.Description = "Warrior of Light and justice";
+
+            Console.WriteLine($"Greetings freedom soul. Choose your hero's body:\n");
+
+            Hero[] heroes = new Hero[]{
+            hero,
+            hero1,
+            hero2
+            };
+
+            for (int i = 0; i < heroes.Length; i++)
+            {
+                Console.WriteLine($"Hero{i + 1}: {heroes[i].HeroClass}. {heroes[i].Description}");
+            };
+
+            string change = Console.ReadLine();
+            int chan = Convert.ToInt32(change);
+            if (chan == 1)
+            {
+                Console.WriteLine($"Your choice is {hero.Name}. {hero.HeroClass}");
+            }
+            else if (chan == 2)
+            {
+                Console.WriteLine($"Your choice is {hero1.Name}. {hero1.HeroClass}");
+            }
+            else if (chan == 3)
+            {
+                Console.WriteLine($"Your choice is {hero2.Name}. {hero2.HeroClass}");
+            }
+            else
+            {
+                Console.WriteLine($"WTF!? Game is Over Man!");
+
+            }
 
             Weapon sword1 = new Weapon(
                 "Slayer's Sword",
@@ -53,6 +100,7 @@ namespace NeverLand
                 500,
                 50);
 
+            #endregion
             ItemProduct[] item = new ItemProduct[] {
                 sword1,
                 health_elixir,
@@ -78,7 +126,7 @@ namespace NeverLand
             int num = Convert.ToInt32(str);
             if (num == 1)
             {
-
+                Console.WriteLine($"{item[1].Name}");
             }
 
         }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Keksik\\New-Game\\Bobolink.csproj": {}
+    "C:\\Sharp\\BOBOLINK\\New-Game\\Bobolink.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Keksik\\New-Game\\Bobolink.csproj": {
+    "C:\\Sharp\\BOBOLINK\\New-Game\\Bobolink.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Keksik\\New-Game\\Bobolink.csproj",
+        "projectUniqueName": "C:\\Sharp\\BOBOLINK\\New-Game\\Bobolink.csproj",
         "projectName": "Bobolink",
-        "projectPath": "C:\\Projects\\Keksik\\New-Game\\Bobolink.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Keksik\\New-Game\\obj\\",
+        "projectPath": "C:\\Sharp\\BOBOLINK\\New-Game\\Bobolink.csproj",
+        "packagesPath": "C:\\Users\\Кексик\\.nuget\\packages\\",
+        "outputPath": "C:\\Sharp\\BOBOLINK\\New-Game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Кексик\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
