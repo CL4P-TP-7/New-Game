@@ -30,30 +30,32 @@ namespace NeverLand
             // Продумай в начала, два режима, первый можно самому выбрать героя, второй рандомно назначается
             #region
 
-            Hero hero = new Hero(
+            Hero hero1 = new Hero(
                 "Azrael",
                 "Black Knight",
                 1000);
-            hero.Description = "Crusader of darkness";
+            hero1.Description = "Crusader of darkness";
 
-            Hero hero1 = new Hero(
+            Hero hero2 = new Hero(
                 "Hawk",
                 "Rogue",
                 1000);
-            hero1.Description = "Dodger";
+            hero2.Description = "Dodger";
 
-            Hero hero2 = new Hero(
+            Hero hero3 = new Hero(
                 "Zick",
                 "Paladin",
                 1000);
-            hero2.Description = "Warrior of Light and justice";
+            hero3.Description = "Warrior of Light and justice";
+
+
 
             Console.WriteLine($"Greetings freedom soul. Choose your hero's body:\n");
 
             Hero[] heroes = new Hero[]{
-            hero,
             hero1,
-            hero2
+            hero2,
+            hero3
             };
 
             for (int i = 0; i < heroes.Length; i++)
@@ -61,25 +63,31 @@ namespace NeverLand
                 Console.WriteLine($"Hero{i + 1}: {heroes[i].HeroClass}. {heroes[i].Description}");
             };
 
-            string change = Console.ReadLine();
-            int chan = Convert.ToInt32(change);
+            Hero player1 = new Hero("", "", 0);
+
+            int chan = Int32.Parse(Console.ReadLine()); // упрощенный вариант для ввода чисел
+
             if (chan == 1)
             {
-                Console.WriteLine($"Your choice is {hero.Name}. {hero.HeroClass}");
+                player1 = hero1;
             }
             else if (chan == 2)
             {
-                Console.WriteLine($"Your choice is {hero1.Name}. {hero1.HeroClass}");
+                player1 = hero2;
             }
             else if (chan == 3)
             {
-                Console.WriteLine($"Your choice is {hero2.Name}. {hero2.HeroClass}");
+                player1 = hero3;
             }
             else
             {
                 Console.WriteLine($"WTF!? Game is Over Man!");
-
+                Environment.Exit(0);
             }
+
+            Console.WriteLine($"Your choice is {player1.Name}. {player1.HeroClass}");
+            Console.WriteLine($"You have {player1.Gold} gold");
+
 
             Weapon sword1 = new Weapon(
                 "Slayer's Sword",
@@ -112,7 +120,7 @@ namespace NeverLand
 
             IHeroActions heroActions = new HeroActions();
 
-            heroActions.UseItemProduct(hero, poison_elixir, health_elixir);
+            heroActions.UseItemProduct(hero1, poison_elixir, health_elixir);
 
             for (int i = 0; i < item.Length; i++)
             {
