@@ -11,7 +11,7 @@ namespace Tavern
 
         public override void Run(Hero hero)
         {
-            System.Console.WriteLine("Cure");
+            System.Console.WriteLine("Лечение");
         }
     }
 

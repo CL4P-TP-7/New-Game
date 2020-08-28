@@ -12,13 +12,25 @@ namespace Heroes
         public string HeroClass { get; private set; }
         public decimal Gold { get; private set; }
         public string Description { get; set; }
+        public decimal HP { get; set; }
+        
+        public object InHand 
+        {  
+            
+            set 
+            {
+                Weapon weapon = new Weapon("", 0, "", 0);
+            }
+        }  
 
-        public Hero(string name, string heroclass, decimal gold)
+        public Hero(string name, string heroclass, decimal gold, decimal hp)
         {
             Name = name;
             HeroClass = heroclass;
             Gold = gold;
+            HP = hp;
         }
+
 
         public virtual void Ability()
         {
@@ -30,6 +42,11 @@ namespace Heroes
             Gold -= product.Price;
         }
 
+        
+        public void Atack()
+        {
+
+        }
     }
 
 
