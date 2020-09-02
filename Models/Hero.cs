@@ -1,6 +1,8 @@
 ﻿using Bobolink.Abstract;
 using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
+using System.Runtime.CompilerServices;
 using System.Text;
 using Tavern;
 
@@ -13,16 +15,8 @@ namespace Heroes
         public decimal Gold { get; private set; }
         public string Description { get; set; }
         public decimal HP { get; set; }
-        
-        public object InHand 
-        {  
-            
-            set 
-            {
-                Weapon weapon = new Weapon("", 0, "", 0);
-            }
-        }  
 
+        public (string name, decimal damage) WeaponHero { get; set; }
         public Hero(string name, string heroclass, decimal gold, decimal hp)
         {
             Name = name;
@@ -42,11 +36,8 @@ namespace Heroes
             Gold -= product.Price;
         }
 
-        
-        public void Atack()
-        {
 
-        }
+
     }
 
 

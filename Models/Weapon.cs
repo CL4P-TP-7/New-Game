@@ -10,9 +10,9 @@ namespace Tavern
 
         public string Hand { get; set; }
 
-        public double Damage { get; set; }
+        public decimal Damage { get; set; }
 
-        public Weapon(string name, decimal price, string hand, double damage) : base(name, price)
+        public Weapon(string name, decimal price, string hand, decimal damage) : base(name, price)
         {
             Hand = hand;
             Damage = damage;
@@ -20,7 +20,7 @@ namespace Tavern
 
         public override void Run(Hero hero)
         {
-            Console.WriteLine("Bang");
+            Console.WriteLine("Бум");
         }
 
         
