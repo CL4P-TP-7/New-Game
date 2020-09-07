@@ -15,6 +15,6 @@ namespace Bobolink.Abstract
         public string Name { get; set; }
         public decimal Price { get; set; }
 
-        public abstract void Run(Hero hero);
+        public abstract void Run(Creature hero);
     }
 }

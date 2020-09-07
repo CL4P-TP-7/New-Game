@@ -10,11 +10,11 @@ namespace Bobolink.Service
 {
     public class HeroActions: IHeroActions
     {
-        public void WeaponAtack (Hero hero, Weapon weapon)
+        public void Atack (Creature hero, Weapon weapon)
         {
             weapon.Run(hero);
         }
-        public void UseItemProduct(Hero hero, ItemProduct product)
+        public void UseItemProduct(Creature hero, ItemProduct product)
         {
             product.Run(hero);
         }

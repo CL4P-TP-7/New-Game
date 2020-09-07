@@ -8,10 +8,12 @@ namespace Bobolink.Interfaces
 {
     public interface IHeroActions
     {
-        void UseItemProduct(Hero hero, params ItemProduct[] products)
+        
+        void UseItemProduct(Creature hero, params ItemProduct[] products)
         {
             foreach(var product in products)
             {
+                
                 product.Run(hero);
             }
         }

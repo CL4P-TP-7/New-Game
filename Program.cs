@@ -28,34 +28,38 @@ namespace NeverLand
             // TODO: Логика выбора героя, чтобы пользователь сам выбрать героя +
             // Продумать что можеть делать герой 
             // Продумай в начала, два режима, первый можно самому выбрать героя, второй рандомно назначается +
-            #region CreateHero
 
-            Hero hero1 = new Hero(
+            //Герои
+            #region HeroModels
+
+            Creature hero1 = new Creature(
                 "Азраэль",
                 "Рыцарь смерти",
                 1000,
                 700);
             hero1.Description = "Восставший воин";
 
-            Hero hero2 = new Hero(
+            Creature hero2 = new Creature(
                 "Хок",
                 "Головорез",
                 1000,
                 500);
             hero2.Description = "Ловкач";
 
-            Hero hero3 = new Hero(
+            Creature hero3 = new Creature(
                 "Зик",
                 "Паладин",
                 1000,
                 800);
             hero3.Description = "Воин света";
 
+            #endregion
 
-
+            //выбор героя первого игрока
+            #region CreateHero
             Console.WriteLine($"Приветствую, незнакомец. Кто ты?\n(выберите героя по номеру, либо любую другую цифру для рандомного выбора)\n");
 
-            Hero[] heroes = new Hero[]{
+            Creature[] heroes = new Creature[]{
             hero1,
             hero2,
             hero3
@@ -66,7 +70,7 @@ namespace NeverLand
                 Console.WriteLine($"Герой{i + 1}: {heroes[i].HeroClass}. {heroes[i].Description}");
             };
 
-            Hero player1 = new Hero("", "", 0,0);
+            Creature player1 = new Creature("", "", 0, 0);//создание игрока на которого навешиваются доп функции
 
             int chan = Int32.Parse(Console.ReadLine()); // упрощенный вариант для ввода чисел
 
@@ -85,7 +89,7 @@ namespace NeverLand
             else
             {
                 Console.WriteLine($"Рандомный выбор");
-                
+
                 Random rnd = new Random();
                 chan = rnd.Next(1, 3);
 
@@ -103,24 +107,25 @@ namespace NeverLand
                 }
             }
 
-           
+
 
             Console.WriteLine($"Ваш выбор:{player1.Name}. {player1.HeroClass}\nЗдоровье:{player1.HP}поинтов");
             Console.WriteLine($"Кошелек:{player1.Gold} золото");
             #endregion
-
-            #region HeroItems
+             
+            //модели оружия
+            #region WeaponModels
             Weapon sword1 = new Weapon(
                 "Большой меч",
                 200,
                 "Двуручное",
                 120);
 
-            Weapon dagger1 = new Weapon(
-                "Кинжал",
-                100,
-                "Одноручный",
-                50);
+            Weapon daggers1 = new Weapon(
+                "Кинжалы",
+                150,
+                "Двуручное",
+                70);
 
             Weapon maul1 = new Weapon(
                 "Гигантский Молот",
@@ -128,9 +133,73 @@ namespace NeverLand
                 "Двуручное",
                 140);
 
+            #endregion
+
+            // Выбор оружия для первого игрока
+            #region ChangeWepon
+
+            ItemProduct[] weapons = new ItemProduct[] {
+                sword1,
+                daggers1,
+                maul1,
+
+            };
+
+            Console.WriteLine($"\nПеред выходом на арену необходимо выбрать оружие:\n");
+
+
+            for (int i = 0; i < weapons.Length; i++)
+            {
+                Console.WriteLine($"Item {i + 1}:{weapons[i].Name}" +
+                    $"\n Price:{weapons[i].Price}\n");
+
+            }
+            Console.WriteLine($"\nВыберите экипировку\"\n");
+
+
+
+
+            int chan2 = Int32.Parse(Console.ReadLine());
+
+            if (chan2 == 1)
+            {
+                Console.WriteLine($"\nВыбран:{sword1.Name}\nУрон:{sword1.Damage}\n");
+                player1.WeaponHero = (sword1.Name, sword1.Damage);
+                player1.BuyItem(sword1);
+                Console.WriteLine($"Золото 1-го игрока:{player1.Gold}\n");
+
+            }
+            if (chan2 == 2)
+            {
+                Console.WriteLine($"\nВыбран:{daggers1.Name}\nУрон:{daggers1.Damage}\n");
+                player1.WeaponHero = (daggers1.Name, daggers1.Damage);
+                player1.BuyItem(daggers1);
+                Console.WriteLine($"Золото 1-го игрока:{player1.Gold}\n");
+
+            }
+            if (chan2 == 3)
+            {
+                Console.WriteLine($"\nВыбран:{maul1.Name}\nУрон:{maul1.Damage}\n");
+                player1.WeaponHero = (maul1.Name, maul1.Damage);
+                player1.BuyItem(maul1);
+                Console.WriteLine($"Золото 1-го игрока:{player1.Gold}\n");
+
+            }
+            #endregion
+
+            Console.WriteLine($"{player1.HeroClass} бьет {player1.WeaponHero.name} на {player1.WeaponHero.damage} урона");
+
+            IHeroActions heroActions = new HeroActions();
+
+            //игрок атакует другого персонажа
+            player1.Atack(hero3);
+            Console.WriteLine($"{hero3.HP}");
+
+
+            #region Пригодится позже
             Elixir health_elixir = new Elixir(
-                "Эликсир здоровья",
-                50);
+             "Эликсир здоровья",
+             50);
 
             Elixir poison_elixir = new Elixir(
                 "Эликсир яда",
@@ -140,60 +209,7 @@ namespace NeverLand
                 "Полный доспех",
                 500,
                 50);
-
-            
-            
-
-            ItemProduct[] item = new ItemProduct[] {
-                sword1,
-                dagger1,
-                maul1,
-                health_elixir,
-                plate,
-                poison_elixir,
-            };
-
-           
-
-            Console.WriteLine($"\nПеред выходом на арену необходимо выбрать экипировку:\n");
-
-            IHeroActions heroActions = new HeroActions();
-            
-
-            heroActions.UseItemProduct(hero1, poison_elixir, health_elixir);
-            
-
-            for (int i = 0; i < item.Length; i++)
-            {
-                Console.WriteLine($"Item {i + 1}:{item[i].Name}" +
-                    $"\n Price:{item[i].Price}\n");
-
-            }
-            Console.WriteLine($"\nВыберите экипировку\"\n");
-            
-
-            
-
-            int chan2 = Int32.Parse(Console.ReadLine());
-                        
-            if (chan2 == 1)
-            {
-                Console.WriteLine($"\nВыбран:{sword1.Name}\nУрон:{sword1.Damage}\n");
-                player1.WeaponHero = (sword1.Name, sword1.Damage);
-            }
-            if (chan2 == 2)
-            {
-                Console.WriteLine($"\nВыбран:{dagger1.Name}\nУрон:{dagger1.Damage}\n");
-                player1.WeaponHero = (dagger1.Name, dagger1.Damage);
-            }
-            if (chan2 == 3)
-            {
-                Console.WriteLine($"\nВыбран:{maul1.Name}\nУрон:{maul1.Damage}\n");
-                player1.WeaponHero = (maul1.Name, maul1.Damage);
-            }
             #endregion
-
-            Console.WriteLine($"{player1.HeroClass} бьет {player1.WeaponHero.name} на {player1.WeaponHero.damage} урона");
         }
 
     }

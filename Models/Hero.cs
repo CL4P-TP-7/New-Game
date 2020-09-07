@@ -8,7 +8,7 @@ using Tavern;
 
 namespace Heroes
 {
-    public class Hero
+    public class Creature
     {
         public string Name { get; private set; }
         public string HeroClass { get; private set; }
@@ -17,7 +17,9 @@ namespace Heroes
         public decimal HP { get; set; }
 
         public (string name, decimal damage) WeaponHero { get; set; }
-        public Hero(string name, string heroclass, decimal gold, decimal hp)
+
+        
+        public Creature(string name, string heroclass, decimal gold, decimal hp)
         {
             Name = name;
             HeroClass = heroclass;
@@ -36,7 +38,10 @@ namespace Heroes
             Gold -= product.Price;
         }
 
-
+        public void Atack (Creature hero)
+        {
+            hero.HP -= this.WeaponHero.damage;
+        }
 
     }
 

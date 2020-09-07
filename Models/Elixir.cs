@@ -9,7 +9,7 @@ namespace Tavern
         {
         }
 
-        public override void Run(Hero hero)
+        public override void Run(Creature hero)
         {
             System.Console.WriteLine("Лечение");
         }

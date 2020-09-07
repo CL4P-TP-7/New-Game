@@ -15,7 +15,7 @@ namespace Tavern
             Protection = protection;
         }
 
-        public override void Run(Hero hero)
+        public override void Run(Creature hero)
         {
             
         }

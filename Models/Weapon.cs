@@ -18,7 +18,7 @@ namespace Tavern
             Damage = damage;
         }
 
-        public override void Run(Hero hero)
+        public override void Run(Creature hero)
         {
             Console.WriteLine("Бум");
         }

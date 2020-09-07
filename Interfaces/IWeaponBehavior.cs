@@ -7,6 +7,6 @@ namespace Bobolink.Interfaces
 {
     public interface IWeaponBehavior
     {
-        void Run(Hero hero);
+        void Run(Creature hero);
     }
 }
